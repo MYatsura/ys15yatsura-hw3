@@ -65,7 +65,7 @@ public class ListFunction implements Iterable<IntFunc> {
         Node oldLast = last;
         last = new Node(func);
         last.next = null;
-        if(empty()) {
+        if (empty()) {
             first = last;
         } else {
             oldLast.next = last;

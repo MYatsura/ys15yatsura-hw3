@@ -8,11 +8,11 @@ import ua.yandex.shad.function.IntBinaryOperator;
 
 public interface IntStream {
 
-    Double average();
+    double average();
 
-    Integer max();
+    int max();
 
-    Integer min();
+    int min();
     
     IntStream flatMap(IntToIntStreamFunction func);
 
@@ -26,7 +26,7 @@ public interface IntStream {
 
     int reduce(int identity, IntBinaryOperator op);
 
-    Integer sum();
+    int sum();
 
     int[] toArray();
 }

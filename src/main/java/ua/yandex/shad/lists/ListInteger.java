@@ -37,7 +37,8 @@ public class ListInteger implements Iterable<Integer> {
             }
             int value = node.val;
             node = node.next;
-            return value;
+            Integer res = value;
+            return res;
         }
     }
     
@@ -64,7 +65,7 @@ public class ListInteger implements Iterable<Integer> {
         Node oldLast = last;
         last = new Node(val);
         last.next = null;
-        if(empty()) {
+        if (empty()) {
             first = last;
         } else {
             oldLast.next = last;
@@ -86,7 +87,7 @@ public class ListInteger implements Iterable<Integer> {
         int[] array = new int[length];
         Iterator<Integer> iter = iterator();
         int ind = 0;
-        while(iter.hasNext()) {
+        while (iter.hasNext()) {
             array[ind++] = iter.next();
         }
         return array;
