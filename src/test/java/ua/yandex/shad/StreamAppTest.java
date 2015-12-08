@@ -28,7 +28,8 @@ public class StreamAppTest {
     public void testStreamOperations() {
         System.out.println("streamOperations");
         int expResult = 42;
-        int result = StreamApp.streamOperations(intStream);
+        StreamApp stream = new StreamApp();
+        int result = stream.streamOperations(intStream);
         assertEquals(expResult, result);        
     }
 

@@ -37,8 +37,7 @@ public class ListInteger implements Iterable<Integer> {
             }
             int value = node.val;
             node = node.next;
-            Integer res = value;
-            return res;
+            return value;
         }
     }
     

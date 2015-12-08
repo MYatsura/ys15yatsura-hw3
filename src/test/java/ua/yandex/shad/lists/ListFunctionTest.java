@@ -5,6 +5,8 @@
  */
 package ua.yandex.shad.lists;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.function.IntPredicate;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -17,8 +19,11 @@ import ua.yandex.shad.function.IntFunc;
 public class ListFunctionTest {
     
 
-    @Test
-    public void testIterator() {
+    @Test(expected = NoSuchElementException.class)
+    public void testIterator_Exception() {
+        ListFunction list = new ListFunction();
+        Iterator<IntFunc> iter = list.iterator();
+        IntFunc item = iter.next();
     }
 
     @Test

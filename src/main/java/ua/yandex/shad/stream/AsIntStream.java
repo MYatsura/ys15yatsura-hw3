@@ -27,7 +27,7 @@ public class AsIntStream implements IntStream {
     }
 
     @Override
-    public double average() {
+    public Double average() {
         performIntermediateOperations();
         if (vals.empty()) {
             throw new IllegalArgumentException();
@@ -36,7 +36,7 @@ public class AsIntStream implements IntStream {
     }
     
     @Override
-    public int max() {
+    public Integer max() {
         performIntermediateOperations();
         if (vals.empty()) {
             throw new IllegalArgumentException();
@@ -46,7 +46,7 @@ public class AsIntStream implements IntStream {
     }
 
     @Override
-    public int min() {
+    public Integer min() {
         performIntermediateOperations();
         if (vals.empty()) {
             throw new IllegalArgumentException();
@@ -97,7 +97,7 @@ public class AsIntStream implements IntStream {
             throw new IllegalArgumentException();
         }
         performIntermediateOperations();
-        return reduce (0, (sum, d) -> sum +=d);
+        return reduce(0, (sum, d) -> sum += d);
     }
 
     @Override
